@@ -13,7 +13,7 @@ module.exports = (email, name, subject, message) => {
   });
 
   const mail = {
-    from: `${name} (${email})`,
+    from: `${name} <${email}>`,
     to: process.env.MAIL_USER,
     subject: `Acontece Construtora Site | ${subject}`,
     text: message

@@ -14,7 +14,7 @@ app.get('/', (request, response, next) => {
 
 app.post('/send', (request, response, next) => {
   const {email, name, subject, message} = request.body;
-  
+
   mail(email, name, subject, message).then(res => response.json(res)).catch(error => response.json(error))
 });
 
