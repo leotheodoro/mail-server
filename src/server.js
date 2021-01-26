@@ -20,6 +20,7 @@ app.post('/send', (request, response, next) => {
 
 const server = http.createServer(app);
 
-server.listen(3030);
+const port = process.env.PORT || 3030;
+server.listen(port);
 
-console.log('Server listening on 3030');
+console.log('Server listening on ' + port);
